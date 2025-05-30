@@ -33,6 +33,14 @@ public class LinkedList : IEnumerable<int>
     public void InsertTail(int value)
     {
         // TODO Problem 1
+
+        // create a new node with the given value
+        // check for head is null
+        // if head is null, set both head and tail to the new node
+        // if head is not null, set the tail's next to the new node
+        // set the new node's previous to the tail
+        // set tail == new node
+
     }
 
 
@@ -65,6 +73,9 @@ public class LinkedList : IEnumerable<int>
     public void RemoveTail()
     {
         // TODO Problem 2
+
+        // tail.prev = null
+        // tail.prev = tail
     }
 
     /// <summary>
@@ -109,6 +120,12 @@ public class LinkedList : IEnumerable<int>
     public void Remove(int value)
     {
         // TODO Problem 3
+
+        // loop through the link list and find current
+        // set current.prev.next to current.next
+        // set the current.next.prev to current.prev
+
+        // current = null
     }
 
     /// <summary>
@@ -117,6 +134,11 @@ public class LinkedList : IEnumerable<int>
     public void Replace(int oldValue, int newValue)
     {
         // TODO Problem 4
+
+        // search for nodes equal to old value
+        // set current.prev.next to new value.next
+        // set new value.data = newValue 
+        // set the new value.prev to current.prev
     }
 
     /// <summary>
@@ -147,6 +169,11 @@ public class LinkedList : IEnumerable<int>
     public IEnumerable Reverse()
     {
         // TODO Problem 5
+        
+        // check and set the head
+        // create a for loop to iterate through the linklist from the tail
+        // yield return the current target value in the loop
+
         yield return 0; // replace this line with the correct yield return statement(s)
     }
 
@@ -168,8 +195,10 @@ public class LinkedList : IEnumerable<int>
     }
 }
 
-public static class IntArrayExtensionMethods {
-    public static string AsString(this IEnumerable array) {
+public static class IntArrayExtensionMethods
+{
+    public static string AsString(this IEnumerable array)
+    {
         return "<IEnumerable>{" + string.Join(", ", array.Cast<int>()) + "}";
     }
 }
