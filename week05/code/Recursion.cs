@@ -15,6 +15,10 @@ public static class Recursion
     public static int SumSquaresRecursive(int n)
     {
         // TODO Start Problem 1
+
+        // set our base case to n <= 0
+        // set our small problem  n ^ 2 + SumSquaresRecursive(n - 1)
+
         return 0;
     }
 
@@ -40,6 +44,11 @@ public static class Recursion
     public static void PermutationsChoose(List<string> results, string letters, int size, string word = "")
     {
         // TODO Start Problem 2
+
+        // the base case : - when word.Length == size
+        // the small problem : - in a loop where letters.Length > 0, we can take the first letter and append it to the word
+        // and then call the function again with the remaining letters and the new word
+        // console.WriteLine($"Current word: {word}, Remaining letters: {letters}");
     }
 
     /// <summary>
@@ -98,6 +107,11 @@ public static class Recursion
 
         // TODO Start Problem 3
 
+        // Initialize the dictionary for memoization if it is null
+        // if key - value exists in map return value
+        // if it does not exist, then we need to calculate it
+
+
         // Solve using recursion
         decimal ways = CountWaysToClimb(s - 1) + CountWaysToClimb(s - 2) + CountWaysToClimb(s - 3);
         return ways;
@@ -119,6 +133,13 @@ public static class Recursion
     public static void WildcardBinary(string pattern, List<string> results)
     {
         // TODO Start Problem 4
+
+        // create result<list> to store the results
+        // base case: - n <= 1
+        // small problem: - take the number of wildcards in the pattern , calculate its permutations as it reltes to its size and 0's and 1's
+        // for each group of wildcards replace it with the list of permutions and Console>Writline the results lists
+
+
     }
 
     /// <summary>
